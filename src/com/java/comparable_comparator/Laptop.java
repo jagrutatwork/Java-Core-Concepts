@@ -129,6 +129,7 @@ public class Laptop implements Comparable<Laptop>{
 			
 		};
 		
+		
 		Collections.sort(laps, com);
 		
 		for(Laptop l: laps)
