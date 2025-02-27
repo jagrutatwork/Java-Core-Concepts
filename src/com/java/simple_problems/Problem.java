@@ -126,16 +126,99 @@ public class Problem {
 	//BinarySearch (recursion)
 	//Binary Search (while loop)
 	//Sorting Algos
+	//Selection sort
+	public static int[] selectionSort(int arr[])
+	{
+		int smallest, index;
+		
+		for (int i = 0; i<arr.length; i++)
+		{
+			smallest = arr[i];
+			index = i;
+			for(int j = i+1; j< arr.length; j++)
+			{
+				if(arr[j]< smallest)
+				{
+					smallest = arr[j];
+					index = j;
+				}
+				
+				
+			}
+			if(index!=i)
+			{
+				int temp = arr[i];
+	            arr[i] = arr[index];
+	            arr[index] = temp;
+			}
+		}
+		
+		return arr;
+		//time complexity:
+		
+		//space complexity:
+		
+	}
 	
+	
+	//BubbleSort
+	public static void bubbleSort(int arr[])
+	{
+		for(int i=0; i<arr.length-1; i++)
+		{
+			for(int j=0; j<arr.length-1; j++)
+			{
+				if(arr[j]>arr[j+1])
+				{
+					int temp = arr[j];
+					arr[j] = arr[j+1];
+					arr[j+1] = temp;
+				}
+			}
+		}	
+		System.out.println("BS HUM FIRST");
+		
+	}
+	
+	//BubbleSort - optimized
+		public static void bubbleSortOpt(int arr[])
+		{
+			boolean swapped = false;
+			for(int i=0; i<arr.length-1-i; i++) //-i meaning in every iteration of the outer for loop we know 
+				//for sure the largest element has been sent to the end hence it doesn't need to
+				//be checked further, this means we can reduce the those number(i) of elements from the end for the check
+			{
+				for(int j=0; j<arr.length-1; j++)
+				{
+					if(arr[j]>arr[j+1])
+					{
+						int temp = arr[j];
+						arr[j] = arr[j+1];
+						arr[j+1] = temp;
+						swapped = true;
+					}
+				}
+				
+				if(!swapped)
+				{break;}
+			}	
+			System.out.println("BSO HUM FIRST");
+		}
+	
+	
+	/**
+	 * @param args.j
+	 */
 	public static void main(String [] args) {
 		
 		printEven(17);
 		printOdd(27);
 		
-		int[] arr1 = {21, 3, 125, 14, 23, 54, 666, 77, 63, 43, 90, 27};
+//		int[] arr1 = {21, 3, 125, 14, 23, 54, 666, 77, 63, 43, 90, 27};
+		//int[] arr1 = {2,7,4,1,5,3};
 		
-		System.out.println(linearSearch(arr1, 8));
-		System.out.println(linearSearch(arr1, 23));
+//		System.out.println(linearSearch(arr1, 8));
+//		System.out.println(linearSearch(arr1, 23));
 		
 		System.out.println(isPrime(9)); //f
 		
@@ -144,7 +227,20 @@ public class Problem {
 		System.out.println(reverseStringBuilder("JAGRUT"));
 		
 		System.out.println(isPalindrome("donovan"));
+		
 		System.out.println(isPalindrome("rever"));
+		
+		  int[] arr1 = {5, 3, 8, 4, 2};
+		  
+		  Thread t1 = new Thread(() -> bubbleSortOpt(arr1.clone()));
+		  Thread t2 = new Thread(() -> bubbleSort(arr1.clone()));
+	
+	      t1.start();
+	      t2.start();
+	        
+		  
+		
+		
 		
 	}
 	
