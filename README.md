@@ -1,20 +1,29 @@
-Java Core Concepts Learning Project
+# Java Core Concepts Learning Project  
 
-Overview
+## 📌 Overview  
+This project serves as a structured learning resource for core Java concepts. Each package represents a different Java topic, and within each package, there is a class with a `main` method that can be uncommented and executed to see the concept in action.  
 
-This project is designed as a self-contained learning resource for understanding core Java concepts. Each package represents a different Java topic, 
-and within each package, there is a class with a main method that can be uncommented and executed to test and understand the concept in action.
+## 🚀 How to Use  
+1. **Explore Packages** – Each package covers a different core Java topic.  
+2. **Uncomment & Run** – Uncomment the `main` method in any class and execute it.  
+3. **Read Comments** – Each class includes detailed explanations to reinforce learning.  
+4. **Expand the Project** – Add new Java concepts over time to deepen understanding.  
 
-How to Use
+## 📚 Concepts Covered  
 
-Explore Packages – Each package covers a different core Java topic.
-Uncomment & Run – To understand a concept, uncomment the main method and run the class.
-Read Comments – Each class contains detailed explanations to help reinforce learning.
-Expand the Project – Keep adding new Java concepts over time.
+### 1️⃣ Comparable & Comparator (`com.java.comparable_comparator`)  
+- **Comparable** – Interface for defining the natural ordering of objects.  
+- **Comparator** – Interface for custom sorting logic.  
+- **Example:** Sorting objects using both `Comparable` and `Comparator`.  
 
-Concepts Covered
+### 2️⃣ Multithreading (`com.java.multithreading`)  
+- Understanding **threads**, **Runnable**, and **synchronization**.  
+- Implementing threads using:  
+  - ✅ **Extending `Thread` class**  
+  - ✅ **Implementing `Runnable` interface**  
+- **Example:** **Printing Even & Odd Numbers Using Two Threads**  
+  - Two threads communicate using `wait()` and `notify()` to print numbers sequentially.  
 
-1. Comparable & Comparator (com.java.comparable_comparator)
-Comparable: Interface for defining natural ordering of objects.
-Comparator: Interface for custom sorting logic.
-Includes examples and comments explaining how to use both.
+---
+
+⚡ **More concepts will be added as the project evolves!** Stay tuned! 🚀  
