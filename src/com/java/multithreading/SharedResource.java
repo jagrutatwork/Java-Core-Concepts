@@ -4,7 +4,7 @@ class SharedResource {
     private boolean flag = false;
     private static int num = 0;
     
-    synchronized void produce() {
+    public void produce() {
         try {
             while (flag) {
                 wait();  // Wait until consumer consumes
@@ -17,7 +17,7 @@ class SharedResource {
         }
     }
 
-    synchronized void consume() {
+    public void consume() {
         try {
             while (!flag) {
                 wait(); // Wait until producer produces
