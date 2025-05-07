@@ -19,6 +19,14 @@ public class BinaryTrees {
 	static class BinaryTree {
 		static int idx = -1;
 		static int count = 0;
+		/**
+		 * @param nodes
+		 * @return
+		 */
+		/**
+		 * @param nodes
+		 * @return
+		 */
 		public static Node buildBinaryTree(int nodes[]) { //PreOrder
 			idx++;
 			if(nodes[idx]==-1)
